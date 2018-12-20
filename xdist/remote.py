@@ -106,7 +106,7 @@ class WorkerInteractor(object):
         data = serialize_report(report)
         data["item_index"] = self.item_index
         data["worker_id"] = self.workerid
-        assert self.session.items[self.item_index].nodeid == report.nodeid
+        # assert self.session.items[self.item_index].nodeid == report.nodeid
         self.sendevent("testreport", data=data)
 
     def pytest_collectreport(self, report):
